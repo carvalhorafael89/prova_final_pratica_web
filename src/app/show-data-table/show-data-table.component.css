@@ -24,3 +24,11 @@
   width:auto;
   color: white;
 }
+
+.true{
+  background-color: green;
+}
+
+.false{
+  background-color: red;
+}
