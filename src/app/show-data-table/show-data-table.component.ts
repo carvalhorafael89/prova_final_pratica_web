@@ -1,6 +1,8 @@
+import { TodoServiceService } from './../../todo-service.service';
 import { Component, OnInit } from '@angular/core';
-import { TodoServiceService } from 'src/todo-service.service';
 import { TodoInterface } from 'src/Todo-interface';
+
+
 @Component({
   selector: 'app-show-data-table',
   templateUrl: './show-data-table.component.html',
@@ -8,9 +10,16 @@ import { TodoInterface } from 'src/Todo-interface';
 })
 export class ShowDataTableComponent implements OnInit {
 
-  constructor() { }
+  listatodo: TodoInterface[] = [];
+
+  constructor(private TodoService: TodoServiceService ) { }
+
+  getTodoList(): void {
+    this.TodoService.getTodo().subscribe(todo => this.listatodo = todo);
+  }
 
   ngOnInit(): void {
+    this.getTodoList();
   }
 
 }

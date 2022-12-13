@@ -12,8 +12,8 @@ export class TodoServiceService {
 
   private endpoint = 'https://jsonplaceholder.typicode.com/todos';
 
-  getTodo(): Observable<TodoInterface> {
-    return this.http.get<TodoInterface>(this.endpoint);
+  getTodo(): Observable<TodoInterface[]> {
+    return this.http.get<TodoInterface[]>(this.endpoint);
   }
 
 }
