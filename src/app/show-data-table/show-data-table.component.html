@@ -5,13 +5,13 @@
 <div class="div_lateral">
   <table>
     <tr>
-      <td class="cabeçalho"><strong>userId</strong></td>
-      <td class="cabeçalho"><strong>id</strong></td>
-      <td class="cabeçalho"><strong>title</strong></td>
-      <td class="cabeçalho"><strong>completed</strong></td>
+      <td class="header"><strong>userId</strong></td>
+      <td class="header"><strong>id</strong></td>
+      <td class="header"><strong>title</strong></td>
+      <td class="header"><strong>completed</strong></td>
     </tr>
 
-    <tr class="botao" *ngFor="let todo of listatodo">
+    <tr class="linha" *ngFor="let todo of listatodo">
       <td>{{todo.userId}}</td>
       <td>{{todo.id}}</td>
       <td>{{todo.title}}</td>
