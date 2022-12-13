@@ -1,16 +1,21 @@
-<h2><p>Todo List</p></h2>
+<h2>
+  <p>Todo List</p>
+</h2>
 
 <div class="div_lateral">
-<table>
+  <table>
     <tr>
-        <td class="cabeçalho"><strong>userId</strong></td>
-        <td class="cabeçalho"><strong>id</strong></td>
-        <td class="cabeçalho"><strong>title</strong></td>
-        <td class="cabeçalho"><strong>completed</strong></td>
+      <td class="cabeçalho"><strong>userId</strong></td>
+      <td class="cabeçalho"><strong>id</strong></td>
+      <td class="cabeçalho"><strong>title</strong></td>
+      <td class="cabeçalho"><strong>completed</strong></td>
     </tr>
 
     <tr class="botao" *ngFor="let todo of listatodo">
-        <td>{{todo.}}</td>
+      <td>{{todo.userId}}</td>
+      <td>{{todo.id}}</td>
+      <td>{{todo.title}}</td>
+      <div *ngIf="{{condition}}; else elseBlock">
     </tr>
-</table>
+  </table>
 </div>
