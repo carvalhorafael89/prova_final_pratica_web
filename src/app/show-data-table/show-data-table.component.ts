@@ -21,5 +21,4 @@ export class ShowDataTableComponent implements OnInit {
   ngOnInit(): void {
     this.getTodoList();
   }
-
 }

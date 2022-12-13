@@ -11,12 +11,12 @@
       <td class="cabeçalho"><strong>completed</strong></td>
     </tr>
 
-    <tr class="botao" *ngFor="let todo of listatodo" *ngIf="(observable$ | async) as todo.completed else setfalso">
-      <ng-template #setfalso>teste </ng-template>
+    <tr class="botao" *ngFor="let todo of listatodo">
       <td>{{todo.userId}}</td>
       <td>{{todo.id}}</td>
       <td>{{todo.title}}</td>
-      <td>{{todo.completed}}</td>
+      <td *ngIf="todo.completed == 'true';else setfalso">{{todo.completed}}</td>
+      <ng-template #setfalso>teste</ng-template>
     </tr>
   </table>
 </div>
