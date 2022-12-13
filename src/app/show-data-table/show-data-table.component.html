@@ -11,7 +11,8 @@
       <td class="cabeçalho"><strong>completed</strong></td>
     </tr>
 
-    <tr class="botao" *ngFor="let todo of listatodo">
+    <tr class="botao" *ngFor="let todo of listatodo" *ngIf="(observable$ | async) as todo.completed else setfalso">
+      <ng-template #setfalso>teste </ng-template>
       <td>{{todo.userId}}</td>
       <td>{{todo.id}}</td>
       <td>{{todo.title}}</td>

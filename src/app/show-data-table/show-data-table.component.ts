@@ -1,7 +1,6 @@
 import { TodoServiceService } from './../../todo-service.service';
 import { Component, OnInit } from '@angular/core';
 import { TodoInterface } from 'src/Todo-interface';
-import { Observable } from 'rxjs';
 
 
 @Component({
@@ -22,4 +21,5 @@ export class ShowDataTableComponent implements OnInit {
   ngOnInit(): void {
     this.getTodoList();
   }
+
 }
