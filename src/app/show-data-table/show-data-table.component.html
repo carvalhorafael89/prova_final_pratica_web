@@ -12,11 +12,20 @@
     </tr>
 
     <tr class="botao" *ngFor="let todo of listatodo">
-      <td>{{todo.userId}}</td>
-      <td>{{todo.id}}</td>
-      <td>{{todo.title}}</td>
-      <td *ngIf="todo.completed == 'true';else setfalso">{{todo.completed}}</td>
-      <ng-template #setfalso>teste</ng-template>
+      <div *ngIf="todo.completed != ''; else setfalso">
+        <td class="true">{{todo.userId}}</td>
+        <td class="true">{{todo.id}}</td>
+        <td class="true">{{todo.title}}</td>
+        <td class="true">{{todo.completed}}</td>
+      </div>
+      <div>
+        <ng-template #setfalso>
+          <td class="false">{{todo.userId}}</td>
+          <td class="false">{{todo.id}}</td>
+          <td class="false">{{todo.title}}</td>
+          <td class="false">{{todo.completed}}</td>
+        </ng-template>
+      </div>
     </tr>
   </table>
 </div>
